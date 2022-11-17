@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css1/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -15,14 +18,14 @@
                  <div class="my-profile">
                     <img src="./img1/user_sample.png">
                     <div class="info">
-                    <b><p>رضا تهرانی</p></b>
+                    <b><p id="getname">رضا تهرانی</p></b>
                     
-                    <p style="width: 100%;">@Reza</p>
+                    <p style="width: 100%;" id="getusername">@Reza</p>
                     
-                    <p style="width: 100%;">+98 912 000 1122</p>
+                    <p style="width: 100%;" id="getphnumber">+98 912 000 1122</p>
                 </div>
                  </div>
-                 <div class="item-profile"><p>ویرایش اطلاعات</p></div>
+                 <div class="item-profile" id="cchange"><p>ویرایش اطلاعات</p></div>
                  <div class="item-profile"><p>تغییر رمز عبور</p></div>
                  <div class="item-profile"><p>ثبت اطلاعات محل سکونت</p></div>
                  <div class="item-profile"><p>کیف پول</p></div>
@@ -37,16 +40,16 @@
     <div class="footer">
         
         <div id="profile" class="btn">
-            <div class="icon-btn"></div>
-            <p><b style="margin: 0;">پروفایل</b></p>
+            <div class="icon-btn"><i class="bi bi-person-fill"></i></div>
+            <p>پروفایل</p>
         </div>
         
         <div id="home" class="btn">
-            <div class="icon-btn"></div>
+            <div class="icon-btn"><i class="bi bi-house"></i></div>
             <p >خانه</p>
         </div>
         <div id="ealanat" class="btn">
-            <div class="icon-btn"></div>
+            <div class="icon-btn"><i class="bi bi-bell"></i></div>
             <p>اعلانات</p>
         </div>
     </div>
@@ -56,24 +59,36 @@
 ealanat.addEventListener('click' , ()=>{
     location.replace('notification.html')
 })
+let getname = document.getElementById('getname')
+getname.innerHTML=localStorage.getItem('name')
+
 let home = document.getElementById('home')
 home.addEventListener('click' , ()=>{
 location.replace('index.html')
 })
+let getphnumber = document.getElementById('getphnumber')
 let profile = document.getElementById('profile')
 profile.addEventListener('click',()=>{
     location.replace('profile.html')
 })
 let exit = document.getElementById('exit')
 exit.addEventListener('click',()=>{
+    localStorage.setItem('getphnumber',getphnumber)
     localStorage.setItem('islogin' , '0')
     location.reload();
 
 })
-
+let cchange = document.getElementById('cchange')
+let namep = document.getElementById('getusername')
+namep.innerText = '@' + localStorage.getItem('name')
 if(localStorage.getItem('islogin')!='1'){
     location.replace('login.html')
 }
+getphnumber.innerHTML="+"+localStorage.getItem('phnumber')
+cchange.addEventListener('click',()=>{
+location.replace('change.html')
+    
+})
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 

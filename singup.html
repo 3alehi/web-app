@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
     <title>login</title>
 </head>
 <body style="background-color: #F3BE00;">
@@ -53,7 +54,7 @@ if (display.style.display!='block' || code.value!="123456" || phnumber.value.len
 }
 }
 if(display.style.display=='block' &&code.value=="123456" ){
-
+localStorage.setItem('phnumber',phnumber.value)
     swal({
         title: 'عملیات موفق',
         text: 'ثبت نام با موفقیت انجام شد',
@@ -63,7 +64,7 @@ if(display.style.display=='block' &&code.value=="123456" ){
 
 setTimeout(function(){
     localStorage.setItem('islogin','1')
-    location.replace('index.html')
+    location.replace('getusername.html')
 },2500)
 
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <title>login</title>
+</head>
+<body style="background-color: #F3BE00;">
+    <div class="main">
+        <header class="header-login">
+            <p>  ویرایش حساب کاربری</p>
+        </header>
+        <div class="form">
+            <div class="input-div">
+                <span> نام کاربری : </span><br>
+                <input type="text" id="changename" class="username" style="text-align: left;" dir="ltr">
+            </div>
+            <div class="input-div">
+                <span> رمز عبور : </span><br>
+                <input type="password" id="chnagepass" class="username"  style="text-align: center;" dir="ltr">
+            </div>
+           
+            <button class="submit" id="change">تائید</button>
+
+        </div>
+    </div>
+    <script>
+        let chngname = document.getElementById('changename')
+        let chnagepass = document.getElementById('chnagepass')
+        let btn = document.getElementById('change')
+        btn.addEventListener('click',()=>{
+ localStorage.setItem('name',chngname.value)
+ localStorage.setItem('password',chnagepass.value)
+ location.replace('profile.html')
+        })
+        
+        </script>
+</body>
+</html>
