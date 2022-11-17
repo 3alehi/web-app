@@ -29,7 +29,7 @@
                  <div class="item-profile"><p>پشتیبانی</p></div>
                  <div class="item-profile"><p>قوانین و شرایط استفاده</p></div>
                  <div class="item-profile"><p>درباره ما</p></div>
-                 <div class="exit-profile"><p>خروج از حساب کاربری</p></div>
+                 <div class="exit-profile" id="exit"><p>خروج از حساب کاربری</p></div>
                    
                   </div>
                 
@@ -64,6 +64,16 @@ let profile = document.getElementById('profile')
 profile.addEventListener('click',()=>{
     location.replace('profile.html')
 })
+let exit = document.getElementById('exit')
+exit.addEventListener('click',()=>{
+    localStorage.setItem('islogin' , '0')
+    location.reload();
+
+})
+
+if(localStorage.getItem('islogin')!='1'){
+    location.replace('login.html')
+}
     </script>
 </body>
 </html>

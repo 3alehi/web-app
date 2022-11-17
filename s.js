@@ -64,3 +64,9 @@ let profile = document.getElementById('profile')
 profile.addEventListener('click',()=>{
     location.replace('profile.html')
 })
+
+
+
+if(localStorage.getItem('islogin')!='1'){
+    location.replace('login.html')
+}

@@ -28,17 +28,30 @@
     </div>
     <script>
         let vorod = document.querySelector('.cracc')
+  
         vorod.addEventListener('click' , ()=>{
             location.replace('singup.html')
         })
         let password = document.getElementById('password')
         let username = document.getElementById('username')
        let vorod1 = document.getElementById('sumbit-login')
+       if(localStorage.getItem('islogin')=='1'){
+              
+          
+              location.replace('index.html')
+          }
        vorod1.addEventListener('click' , ()=>{
 
            if(password.value == 'demo' && username.value == "demo"){
-                location.replace('index.html')
+            if(localStorage.getItem('islogin') !='1'){
+              
+              localStorage.setItem('islogin' , '1')
+              location.replace('index.html')
+          }
+              
+                
             }
+            
        })
     </script>
 </body>
