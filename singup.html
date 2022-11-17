@@ -15,9 +15,9 @@
         <div class="form">
             <div class="input-div">
                 <span>شماره همراه : </span><br>
-                <input type="number" id="phnumber" class="username" placeholder="+98" style="text-align: left;" dir="ltr">
+                <input type="number" id="phnumber"   value="+98" class="username" placeholder="+98" style="text-align: left;" dir="ltr">
             </div>
-            <div class="input-div">
+            <div id="display" class="input-div">
                 <span>کد تائید : </span><br>
                 <input type="number" id="code" class="username" placeholder="112-233" style="text-align: center;" dir="ltr">
             </div>
@@ -28,9 +28,53 @@
         </div>
     </div>
     <script>
+        let code = document.getElementById('code')
+        let display = document.getElementById('display')
+        let ok = false;
         let vorod = document.querySelector('.cracc')
         vorod.addEventListener('click',()=>{
 location.replace('login.html')        })
+let phnumber = document.getElementById('phnumber')
+let submit = document.getElementById('sumbit-login')
+submit.addEventListener('click',()=>{
+    if(phnumber.value.length ==12)  {
+        ok =true;
+display.style.display='block'
+
+}
+if(ok == false){
+if (display.style.display!='block' || code.value!="123456" || phnumber.value.length !=12){
+    swal({
+    title: 'اوه!نه',
+    text: 'اطلاعات وارد شده صحیح نمی باشد',
+    icon: 'error',
+    timer: 2000,
+})
+}
+}
+if(display.style.display=='block' &&code.value=="123456" ){
+
+    swal({
+        title: 'عملیات موفق',
+        text: 'ثبت نام با موفقیت انجام شد',
+    icon: 'success',
+    timer: 2000,
+})
+
+setTimeout(function(){
+    localStorage.setItem('islogin','1')
+    location.replace('index.html')
+},2500)
+
+}
+
+
+
+
+})
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
 </body>
 </html>
