@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header"><p>خدماتینو</p></header>
+        <div class="cont">
+              
+                 <div class="my-profile">
+                    <img src="./img1/user_sample.png">
+                    <div class="info">
+                    <b><p>رضا تهرانی</p></b>
+                    
+                    <p style="width: 100%;">@Reza</p>
+                    
+                    <p style="width: 100%;">+98 912 000 1122</p>
+                </div>
+                 </div>
+                 <div class="item-profile"><p>ویرایش اطلاعات</p></div>
+                 <div class="item-profile"><p>تغییر رمز عبور</p></div>
+                 <div class="item-profile"><p>ثبت اطلاعات محل سکونت</p></div>
+                 <div class="item-profile"><p>کیف پول</p></div>
+                 <div class="item-profile"><p>پشتیبانی</p></div>
+                 <div class="item-profile"><p>قوانین و شرایط استفاده</p></div>
+                 <div class="item-profile"><p>درباره ما</p></div>
+                 <div class="exit-profile"><p>خروج از حساب کاربری</p></div>
+                   
+                  </div>
+                
+    </div>
+    <div class="footer">
+        
+        <div id="profile" class="btn">
+            <div class="icon-btn"></div>
+            <p><b style="margin: 0;">پروفایل</b></p>
+        </div>
+        
+        <div id="home" class="btn">
+            <div class="icon-btn"></div>
+            <p >خانه</p>
+        </div>
+        <div id="ealanat" class="btn">
+            <div class="icon-btn"></div>
+            <p>اعلانات</p>
+        </div>
+    </div>
+    </div>
+    <script>
+        let ealanat = document.getElementById('ealanat')
+ealanat.addEventListener('click' , ()=>{
+    location.replace('notification.html')
+})
+let home = document.getElementById('home')
+home.addEventListener('click' , ()=>{
+location.replace('index.html')
+})
+let profile = document.getElementById('profile')
+profile.addEventListener('click',()=>{
+    location.replace('profile.html')
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header"><p>خدماتینو</p></header>
+        <div class="cont">
+               <div class="item-notify">
+
+                <b>| تخفیف ویژه</b>
+                <br>
+                <p>تخفیف ویژه جهت خرید شارژ و بسته اینترنتی</p>
+               </div>
+                 
+                   
+                  </div>
+                
+    </div>
+    <div class="footer">
+        
+        <div id="profile" class="btn">
+            <div class="icon-btn"></div>
+            <p>پروفایل</p>
+        </div>
+        
+        <div id="home" class="btn">
+            <div class="icon-btn"></div>
+            <p>خانه</p>
+        </div>
+        <div id="ealanat" class="btn">
+            <div class="icon-btn"></div>
+            <p><b style="margin: 0;">اعلانات</b></p>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    let home = document.getElementById('home')
+home.addEventListener('click' , ()=>{
+location.replace('index.html')
+
+})
+let ealanat = document.getElementById('ealanat')
+ealanat.addEventListener('click' , ()=>{
+    location.replace('notification.html')
+})
+
+let profile = document.getElementById('profile')
+profile.addEventListener('click',()=>{
+    location.replace('profile.html')
+})
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>login</title>
+</head>
+<body style="background-color: #F3BE00;">
+    <div class="main">
+        <header class="header-login">
+            <p>ورود به حساب کاربری</p>
+        </header>
+        <div class="form">
+            <div class="input-div">
+                <span>نام کاربری / کد ملی :</span><br>
+                <input type="text" id="username" class="username">
+            </div>
+            <div class="input-div">
+                <span>رمز عبور :</span><br>
+                <input type="password" id="password" class="username">
+            </div>
+            <button class="submit" id="sumbit-login">ورود</button>
+
+            <p class="cracc">حساب کاربری ندارید ؟ <span id="CRAcc">ساخت حساب کاربری</span></p>
+        </div>
+    </div>
+    <script>
+        let vorod = document.querySelector('.cracc')
+        vorod.addEventListener('click' , ()=>{
+            location.replace('singup.html')
+        })
+        let password = document.getElementById('password')
+        let username = document.getElementById('username')
+       let vorod1 = document.getElementById('sumbit-login')
+       vorod1.addEventListener('click' , ()=>{
+
+           if(password.value == 'demo' && username.value == "demo"){
+                location.replace('index.html')
+            }
+       })
+    </script>
+</body>
+</html>
