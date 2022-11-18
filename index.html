@@ -16,64 +16,64 @@
 
         <header class="header"><p>خدماتینو</p></header>
         <div class="cont">
-                  <div class="news"><p id="khabar"><b></b>  </p></div>
+                  <div class="news"><p  id="khabar"><b></b>اخبار کوتاه در خدماتینو</p></div>
                   <div class="slider">
-                    <img id="sliderimg" src="slider11.jpg" alt="">
+                    <img id="sliderimg" src="./img/slider11.jpg" alt="">
 
                   </div>
                   <h1 class="title-div">خدمات ویژه : </h1>
                   <div class="service-vip">
-                    <div class="item-service">
-                        <div class="item-icon icon-btn"><i class="bi bi-credit-card"></i></div>
-                        <p>عوارض خوردرو</p>
+                    <div id="paycar" class="item-service">
+                        <div  class="item-icon icon-btn"><i id="i" class="bi bi-credit-card"></i></div>
+                        <p>پرداخت کرایه</p>
                     </div>
-                    <div class="item-service">
+                    <div id="searchcar" class="item-service">
                         <div class="item-icon icon-btn"><i class="bi bi-car-front"></i></div>
                         <p>استغلام خلافی</p>
                     </div>
-                    <div class="item-service">
+                    <div  id="gomshodegan" class="item-service">
                         <div class="item-icon icon-btn"><i class="bi bi-search"></i></div>
-                        <p>گمشدگان</p>
+                        <p>گم شدگان</p>
                     </div>
                     <div class="item-service">
-                        <div class="item-icon icon-btn"><i class="bi bi-wallet2"></i></div>
+                        <div id="wallet" class="item-icon icon-btn"><i class="bi bi-wallet2"></i></div>
                         <p>کیف پول</p>
                     </div>
                   </div>
                   <h1 class="title-div">خدمات و سرویس ها : </h1>
                   <div class="service-public">
                     <div class="item-row">
-                        <div class="item-service">
+                        <div id="ghabz" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-qr-code-scan"></i></div>
                             <p>پرداخت قبوض</p>
                         </div>
-                        <div class="item-service">
+                        <div id="codeposty" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-upc"></i></div>
                             <p>سرویس کدپستی</p>
                         </div>
-                        <div class="item-service">
+                        <div id="mapservice" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-geo-alt-fill"></i></div>
                             <p>مکان های خدماتی</p>
                         </div>
-                        <div class="item-service">
+                        <div id="tamas" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-telephone-fill"></i></div>
                             <p>شماره های اضطراری</p>
                         </div>
                     </div>
                     <div class="item-row" >
-                        <div class="item-service">
+                        <div id="taghvim" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-calendar-date"></i></div>
                             <p>تقویم</p>
                         </div>
-                        <div class="item-service">
+                        <div id="report" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-exclamation-triangle"></i></div>
                             <p>گزارش تخلف</p>
                         </div>
-                        <div class="item-service">
+                        <div id="mapg" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-map"></i></div>
                             <p>مکان های گردشگری</p>
                         </div>
-                        <div class="item-service">
+                        <div id="reportsos" class="item-service">
                             <div class="item-icon icon-btn"><i class="bi bi-hospital"></i></div>
                             <p>وضعیت اضطراری</p>
                         </div>
@@ -103,8 +103,57 @@
     </div>
 </div>
 </body>
+<script>
+    let codeposty = document.getElementById('codeposty')
+    let ghabz = document.getElementById('ghabz')
+    ghabz.addEventListener('click',()=>{
+location.replace('Qr-code.html')
+    })
+    let tamas = document.getElementById('tamas')
+    tamas.addEventListener('click',()=>{
+        location.replace('tamas.html')
+    })
+    let mapservice = document.getElementById('mapservice')
+    mapservice.addEventListener('click',()=>{
+        location.replace('map-service.html')
+    })
+    let srchh = document.getElementById('searchcar')
+    srchh.addEventListener('click',()=>{
+        location.replace('search-car.html')
+    })
+    let paycar = document.getElementById('paycar')
+    paycar.addEventListener('click',()=>{
+        location.replace('pay-car.html')
+    })
+    let mapgs = document.getElementById('mapg')
+    mapgs.addEventListener('click',()=>{
+        location.replace('map-g.html')
+    })
+    let report = document.getElementById('report')
+    report.addEventListener('click',()=>{
+        location.replace('report.html')
+    })
+    let reportsos = document.getElementById('reportsos')
+    reportsos.addEventListener('click',()=>{
+        location.replace('report-sos.html')
+    })
+    let gomshodegan = document.getElementById('gomshodegan')
+    gomshodegan.addEventListener('click',()=>{
+        location.replace('G-page.html')
+    })
+    let i = document.getElementById('i')
+    i.addEventListener('click',()=>{
+        location.replace('index.html')
+    })
+    let taghvim = document.getElementById('taghvim')
+    taghvim.addEventListener('click' , ()=>{
+        location.replace('taghvim.html')
+    })
+    codeposty.addEventListener('click',()=>{
+        location.replace('codeposty.html')
+    })
+</script>
 
-
-<script src="./s.js"></script>
+<script src="./js/App.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </html>

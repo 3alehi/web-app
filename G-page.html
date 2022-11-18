@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #ffffff;">
+    
+    <div class="main">
+        <header class="header-app">
+            <div id="back"><i class="bi bi-arrow-left"></i></div>
+            <style>
+                #back{
+                    font-size: 40px;
+                    color: black;
+                }
+            </style>            <div class="title"><p style="margin-right: 40px;">گمشدگان</p></div>
+            
+        </header>
+        <div class="cont">
+     
+        <div class="item-row-g">
+
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;">فاطمه محمدی</p>
+                <p dir="rtl" style="font-size: 14px;">8 ساله</p>
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;"> علیرضا صادقی </p>
+                <p dir="rtl" style="font-size: 14px;">18 ساله</p>
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+        </div>
+       
+            
+        <div class="item-row-g">
+
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;"> صادق سجادی</p>
+                <p dir="rtl" style="font-size: 14px;">21 ساله</p>
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;"> جواد محمدی</p>
+                <p dir="rtl" style="font-size: 14px;">7ساله</p>
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+        </div>
+            <style>
+                #add{
+                    width: 90px;
+                    height: 50px;
+                    border-radius: 50px;
+                    color: white;
+                    background: #000;
+                }
+            </style>
+        <div class="item-row-g">
+
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;"> گوشی اپل</p>
+                <!-- <p dir="rtl" style="font-size: 14px;">8 ساله</p> -->
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+            <div class="item-g">
+                <img src="./1.png" class="item-img-g">
+                <p style="font-size: 16px; font-weight: 1000;"> کارت ماشین</p>
+                <!-- <p dir="rtl" style="font-size: 14px;">8 ساله</p> -->
+                <div class="c-go"><p style="color: #ffffff;text-align: center;"> <a  href="tel://09138131173">  تماس</a></p></div>
+            </div>
+           
+        </div>
+            
+        </div>
+    </div>
+    </div>
+    <center>
+    <button id="add">اضافه کردن</button>
+</center>
+    <script>
+           let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('index.html')
+        })
+        let add = document.getElementById('add')
+        add.addEventListener('click',()=>{
+            location.replace('addg.html')
+        })
+    </script>
+</body>
+</html>

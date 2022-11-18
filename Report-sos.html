@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #ffffff;">
+    
+    <div class="main">
+        <header class="header-app">
+            <div id="back"><i class="bi bi-arrow-left"></i></div>
+            <style>
+                #back{
+                    font-size: 40px;
+                    color: black;
+                }
+            </style>             <div class="title" style="margin-right: 28px;"><p>وضعیت اضطراری</p></div>
+            
+        </header>
+        <div class="cont">
+           <div class="helpReport">
+            <p>با کلیک بر روی دکمه «ارسال گزارش» اگر در موقعیت خطرناکی باشید
+               
+                لوکیشن شما به صورت خودکار به همراه 15 ثانیه صدا از محیط اطراف برای
+                
+                اپراتور ارسال می شود.
+            </p>
+           </div>
+           <div class="btnReport">
+
+               <button id="submit" style="background-color: #ff0000; color:#ffffff; padding: 10px;width: 100px; border-radius:10px;font-weight: bold;font-size: 15px; ">ارسال گزارش</button>
+
+           </div>
+    </div>
+    </div>
+    <script>
+        let submit = document.getElementById('submit')
+
+      
+        submit.addEventListener('click',()=>{
+        
+    swal({
+        title: 'ضبط صدا',
+        text: 'درحال ضبط صدای محیط اطراف...',
+        icon: 'warning',
+        timer: 3000,
+                 })
+                 setTimeout(function(){
+                    swal({
+        title: 'عملیات موفق',
+        text: 'اطلاعات شما برای اپراتور ارسال شد',
+        icon: 'success',
+        timer: 3000,
+                 })
+                },3500)
+              
+         
+        })
+
+        let khadamat = document.getElementById('hi')
+        
+           let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('index.html')
+        })
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</body>
+</html>

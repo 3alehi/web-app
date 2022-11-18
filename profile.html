@@ -16,7 +16,7 @@
         <div class="cont">
               
                  <div class="my-profile">
-                    <img src="./img1/user_sample.png">
+                    <img src="./img/user_sample.png">
                     <div class="info">
                     <b><p id="getname">رضا تهرانی</p></b>
                     
@@ -26,13 +26,13 @@
                 </div>
                  </div>
                  <div class="item-profile" id="cchange"><p>ویرایش اطلاعات</p></div>
-                 <div class="item-profile"><p>تغییر رمز عبور</p></div>
-                 <div class="item-profile"><p>ثبت اطلاعات محل سکونت</p></div>
-                 <div class="item-profile"><p>کیف پول</p></div>
-                 <div class="item-profile"><p>پشتیبانی</p></div>
-                 <div class="item-profile"><p>قوانین و شرایط استفاده</p></div>
-                 <div class="item-profile"><p>درباره ما</p></div>
+                 <div id="palce" class="item-profile"><p>ثبت اطلاعات محل سکونت</p></div>
+                 <div id="wallet" class="item-profile"><p>کیف پول</p></div>
+                 <div id="support" class="item-profile"><p>پشتیبانی</p></div>
+                 <div id="shraiet" class="item-profile"><p>قوانین و شرایط استفاده</p></div>
+                 <div id="about" class="item-profile"><p>درباره ما</p></div>
                  <div class="exit-profile" id="exit"><p>خروج از حساب کاربری</p></div>
+
                    
                   </div>
                 
@@ -88,6 +88,27 @@ getphnumber.innerHTML="+"+localStorage.getItem('phnumber')
 cchange.addEventListener('click',()=>{
 location.replace('change.html')
     
+})
+let wallet = document.getElementById('wallet')
+wallet.addEventListener('click' , ()=>{
+    location.replace('wallet.html')
+})
+let shraiet = document.getElementById('shraiet')
+shraiet.addEventListener('click',()=>{
+    location.replace('terms.html')
+})
+let palce = document.getElementById('palce')
+palce.addEventListener('click',()=>{
+    location.replace('location.html')
+})
+let about = document.getElementById('about')
+about.addEventListener('click',()=>{
+    location.replace('about.html')
+})
+
+let support = document.getElementById('support')
+support.addEventListener('click',()=>{
+    location.replace('support.html')
 })
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

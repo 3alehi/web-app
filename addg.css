@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3be00;
+}
+
+#sa-go-bars{
+    width: 100%;
+    height: 4rem;
+    background-color: #000;
+    display: flex;
+    padding-top: 1.4rem;
+    border-radius: 0 0 1.5rem 0;
+}
+
+#back-sa-go{
+    width: 2rem;
+    height: 1rem;
+    background-color: #f3be00;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}
+
+#title-s-g{
+    width: 100%;
+    text-align: center;
+}
+
+#title-s-g p{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#title{
+    direction: rtl;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+#container-uplod{
+
+    margin-left: 8%;
+}
+
+#container-u{
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#uplod{
+    width: 7rem;
+    height: 5rem;
+    background-color: #000;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+
+
+#moshakhsat{
+    
+}
+
+
+.name{
+border: 2px solid #000;
+background-color: #f3be00;
+padding: 0.3rem;
+border-radius: 0.5rem;
+margin-bottom: 0.2rem;
+margin-right: 0.5rem;
+margin-top: 0.2rem;
+}
+
+
+#caption-more{
+    direction: rtl;
+    margin-right: 3.5rem;
+    margin-top: 0.8rem;
+    font-weight: bold;
+}
+
+
+#button-submit{
+    display: grid;
+    place-content: center;
+    width: 7rem;
+    height: 2rem;
+    background-color: #000;
+    color: #fff;
+    margin-left: 25%;
+    margin-top: 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+}
+
+
+#alert{
+    direction: rtl;
+    margin-right: 5%;
+    margin-top: 3rem;
+}
+
+
+#alert-title{
+color: red;
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
+
+#alert-caption{
+
+}
+
+textarea{
+    background-color: #f3be00;
+    border: 0;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}

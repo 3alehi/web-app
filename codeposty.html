@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+    <header class="header-app">
+        <div id="back"><i class="bi bi-arrow-left"></i></div>
+        <style>
+            #back{
+                font-size: 40px;
+                color: black;
+            }
+        </style>            <div class="title" style="margin-right: 28px;"><p>سرویس کدپستی </p></div>
+        
+    </header>
+
+    <div class="form" style="direction: rtl;">
+
+        <input id="t" type="text" value="قم" placeholder="شهر" style="margin: 5px;">
+        <input id="a" type="text" value="باجک3" placeholder="منطقه / محله" style="margin: 5px;"><br>
+        <input id="b" type="text" value="10نیلوفر" placeholder="خیابان / کوچه" style="margin: 5px;">
+        <input id="c" type="text" value="پلاک11" placeholder="پلاک" style="margin: 5px;"><br>
+        <button id="submit" style="background-color: #000000; color:#ffffff; padding: 10px;width: 100px; border-radius:10px;font-weight: bold;font-size: 15px; ">ارسال</button>
+    </div>
+
+</body>
+<script>
+
+let submit = document.getElementById('submit')
+
+      
+submit.addEventListener('click',()=>{
+    if(document.getElementById('t').value == 'قم' &&  document.getElementById('a').value == 'باجک3' &&  document.getElementById('b').value == '10نیلوفر' &&  document.getElementById('c').value == 'پلاک11'){
+swal({
+title: 'کد پستی',
+text: 'کد پستی شما : 3719112098',
+icon: 'success',
+timer: 5000,
+         })
+        }else{
+            swal({
+title: 'عملیات ناموفق',
+text: 'این برنامه صرفا یک دمو می باشد و بخش کد پستی به وب سرویسی متصل نیست',
+icon: 'error',
+timer: 3000,
+         })
+        }
+ 
+})
+        let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('index.html')
+        })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</html>

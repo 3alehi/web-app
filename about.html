@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+</head>
+<body style="background-color: #ffffff;">
+    
+    <div class="main">
+        <header class="header-app">
+            <div id="back"><i class="bi bi-arrow-left"></i></div>
+            <style>
+                #back{
+                    font-size: 40px;
+                    color: black;
+                }
+            </style>            <div class="title" style="margin-right: 28px;"><p>دباره ما</p></div>
+            
+        </header>
+        <div class="cont">
+        <div class="help">
+            <p dir="rtl" style="font-size: 20px;">| درباره ما :</p>
+            <br>
+            <p class="text-help">
+                طراحی و توسعه توسط تیم <b>براکت</b> در چهارمین رویداد ملی تولید محتوای دیجیتال بسیج
+                <br><br>
+               <p> 1401/08/26</p>    
+            </p>
+         
+        </div>
+    </div>
+    </div>
+    <script>
+           let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('profile.html')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #ffffff;">
+    
+    <div class="main">
+        <header class="header-app">
+            <div id="back"><i class="bi bi-arrow-left"></i></div>
+            <style>
+                #back{
+                    font-size: 40px;
+                    color: black;
+                }
+            </style>            <div class="title"><p style="margin-right: 40px;">کیف پول</p></div>
+            
+        </header>
+        <div class="cont">
+            <center>
+            <img style="width: 150px;" src="./img/3359235.png">
+            </center>
+          
+     
+    </div>
+    
+    </div>
+    <div class="foc" style="border-radius: 0;">
+        <div style="background-color: #ffffff;width: 81%;height: 11px;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;padding-top: 50px;margin-left: 40px;margin-right: 40px;">
+            <p id="pool" style= " margin: 0;margin-top: -39px;direction: rtl;text-align: center;font-weight: bold;font-size: 27px;color: #13BA05;">10.500 <sub>تومان</sub></p>
+            </div>
+        
+           <div class="item-row-p">
+            <div class="item-p" >
+                <center>
+                <img src="./img/ph.png" style="width: 50px;margin-top: 10px;">
+                <p style="margin: 0; font-weight: 800; font-size:14px;">خرید شارژ</p>
+
+            </center>
+            </div>
+            <div class="item-p">
+                <center>
+                    <img src="./img/inter.png" style="width: 50px;margin-top: 10px;">
+                    <p style="margin: 0; font-weight: 800; font-size:14px;">بسته اینترنت</p>
+
+                </center>
+            </div>
+            <div id="walletclick" class="item-p">
+                <center>
+                    <img src="./img/add.png" style="width: 50px;margin-top: 10px;">
+                    <p  style="margin: 0; font-weight: 800; font-size:14px;">افزایش اعتبار</p>
+                </center>
+            </div>
+        </div>
+        <div class="item-row-p">
+            <div id="khirei"  class="item-p" style="width: 100%;display: grid; place-items: center; font-size: 25px; font-weight: bold;"><p>کمک به خیریه</p></div>
+
+        </div>
+    </div>
+</body>
+<script>
+    let back = document.getElementById('back')
+    back.addEventListener('click',()=>{
+        location.replace('index.html')
+    })
+    let walletclick = document.getElementById('walletclick')
+    walletclick.addEventListener('click' , ()=>{
+        location.replace('wallet-pay.html')
+    })
+    let pool =document.getElementById('pool')
+    pool.innerHTML= localStorage.getItem('pool') + "<sub>تومان</sub>" 
+    let khirei  = document.getElementById('khirei')
+    khirei.addEventListener('click',()=>{
+        swal({
+        title: 'عملیات موفق',
+        text: '  از اعتماد شما متشکریم ',
+    icon: 'success',
+    timer: 2000,
+})
+        localStorage.setItem('pool','0')
+        pool.innerHTML= localStorage.getItem('pool') + "<sub>تومان</sub>" 
+
+    })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</html>

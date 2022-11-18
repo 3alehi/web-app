@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header-app">
+            <div id="back"><i class="bi bi-arrow-left"></i></div>
+            <style>
+                #back{
+                    font-size: 40px;
+                    color: black;
+                }
+            </style>             <div class="title" style="margin-right: 28px;"><p>استعلام خلافی خودرو</p></div>
+            
+        </header>
+        <div class="cont">
+               <div class="plack">
+                <input id="a" type="text" style="width: 50px;height: 40px;margin-left: 50px; border-radius: 5px;margin-top: 25px;font-size: 30px; text-align: center;" placeholder="11">
+                <select id="cars" style="width: 100px;height: 40px; text-align: right; direction: rtl;background-color: #ffffff; padding: 5px; border: 1px solid #000; border-radius: 5px; margin-top: 25px;">
+                    <option value="volvo">الف</option>
+                    <option value="saab">ب</option>
+                    <option value="opel">س</option>
+                  
+                  </select>
+                  <input id="b" type="text" style="width: 70px;height: 40px; border-radius: 5px; margin-top: 25px; font-size: 30px; text-align: center;" placeholder="222">
+                  <input id="c" type="text" style="width: 80px;height: 40px; border-radius: 5px;margin-right: 10px; margin-top: 25px;font-size: 30px; text-align: center;" placeholder="33">
+                </div>
+                <center>
+
+                    <button id="submit" style="background-color: #000000; color:#ffffff; padding: 10px;width: 100px; border-radius:10px;font-weight: bold;font-size: 15px; margin-top: 30px;">تائید</button>
+                </center>
+                <div class="res">
+                    <div id="item" class="item-car">
+                        <b> <p>| عبور از چراغ قرمز</p></b>
+                        <p>تاریخ : 1401/08/29 - 20:31</p>
+                        <p>محل : قم، خیابان 19 دی</p>
+                        <p>جریمه : 30.000 <sub>تومان</sub></p>
+                    </div>
+                    <div id="item2" class="item-car">
+                        <b> <p>| سرعت غیر مجاز</p></b>
+                         <p>تاریخ : 1401/08/29 - 20:31</p>
+                         <p>محل : قم، خیابان 19 دی</p>
+                         <p>جریمه : 60.000 <sub>تومان</sub></p>
+                     </div>
+                     <div id="item3" class="item-car">
+                        <b> <p>| سرعت غیر مجاز</p></b>
+                         <p>تاریخ : 1401/08/29 - 20:31</p>
+                         <p>محل : قم، خیابان 19 دی</p>
+                         <p>جریمه : 30.000 <sub>تومان</sub></p>
+                     </div>
+                </div>
+                
+             </div>
+
+     </div>
+</body>
+<script>
+    let submit = document.getElementById('submit')
+    let item = document.getElementById('item')
+    let item2= document.getElementById('item2')
+    let item3 = document.getElementById('item3')
+    submit.addEventListener('click' , ()=>{
+        if(document.getElementById('a').value == '11' && document.getElementById('b').value == '222' && document.getElementById('c').value == '33'){
+
+            submit.style.display='none'
+            item.style.display='block'
+            item2.style.display='block'
+            item3.style.display='block'
+        }
+
+})
+
+let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('index.html')
+        })
+if(localStorage.getItem('islogin')!='1'){
+    location.replace('login.html')
+}
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</html>

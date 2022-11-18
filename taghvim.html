@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+  <div id="back"><i class="bi bi-arrow-left"></i></div>
+  <style>
+      #back{
+          font-size: 40px;
+          color: black;
+      }
+  </style> 
+<div class="time-container">
+  <script src="http://jalali.toolsir.com/date.class.php?timestamp=&zone=Asia/Tehran&lang=fa&date=E" type="text/javascript"></script>
+</div>
+  <div class="items">
+    <div class="item">
+      <p class="namaz">نماز صبح</p>
+      <P>5:17</P>
+    </div>
+    <div class="item">
+      <p class="namaz">نماز ظهر</p>
+      <P>12:15</P>
+    </div>
+    <div class="item">
+      <p class="namaz">نماز مغرب</p>
+      <P>17:27</P>
+    </div>
+    <div class="item">
+      <p class="namaz">نماز اعشاء</p>
+      <P>21:20</P>
+    </div>
+  </div>
+  <div class="items2">
+    <div class="item2">
+      <p class="namaz2">طلوع آفتاب</p>
+      <P>5:40</P>
+    </div>
+    <div class="item2">
+      <p class="namaz2">غروب آفتاب</p>
+      <P>17:17</P>
+    </div>
+    </div>
+  </div>
+</body>
+<script>
+        let back = document.getElementById('back')
+        back.addEventListener('click',()=>{
+            location.replace('index.html')
+        })
+</script>
+</html>

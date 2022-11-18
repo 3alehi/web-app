@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+  
+    <div id="sa-go-bars">
+        <div id="back"><i class="bi bi-arrow-left"></i></div>
+        <style>
+            #back{
+                font-size: 40px;
+                color: white;
+            }
+        </style>        <div id="title-s-g">
+            <p>ثبت گمشده</p>
+        </div>
+    </div>
+    <p id="title">| ثبت مشخصات گمشده</p>
+    <div id="container-uplod">
+        <div id="container-u">
+
+            <div id="uplod"></div>
+            <div id="moshakhsat" >
+                <input class="name" type="text" placeholder="نام و نام خانوادگی">
+                <input class="name" type="number" placeholder="سن">
+            </div>
+        </div>
+        <p id="caption-more">توضیحات بیشتر:</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div id="button-submit">ثبت</div>
+    </div>
+
+    <div id="alert">
+        <p id="alert-title">توجه :</p>
+        <p id="alert-caption">اطلاعات گمشده شما پس از تائید ناظر در لیست گمشدگان قرار میگیرد.</p>
+    </div>4
+    <script>
+          back.addEventListener('click',()=>{
+            location.replace('G-page.html')
+        })
+        let button = document.getElementById('button-submit')
+        button.addEventListener('click',()=>{
+            swal({
+        title: 'عملیات موفق',
+        text: ' زمان کافی نبود برای انجام ',
+    icon: 'success',
+    timer: 2000,
+})
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</body>
+</html>
